@@ -1,0 +1,2 @@
+const domTextOut = document.getElementById("txtOut") as HTMLTextAreaElement;
+domTextOut.innerHTML = "<p>Hello JavaScript version ECMAScript 6!</p><p>Successfully running modules in a Live Server environment.</p>";

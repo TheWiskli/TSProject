@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" style="display: table; margin: auto; zoom: 1">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task 4.2</title>
+  </head>
+  <body style="display: table-cell; vertical-align: middle">
+    <h2><label for="txtOut">Output from Task 4.2:</label></h2>
+    <div style="padding: 10px; min-width: 512px; border: darkblue thin solid; background-color: antiquewhite; font-family: 'Courier New', serif">
+      <span id="txtOut" style="white-space: nowrap"></span>
+    </div>
+    <p>
+      <li>What is an array? A short and concise answer is expected here!</li>
+      <p>An array is a structure that stores a list of elements of the same type, that is accessible by a number called an index.</p>
+      
+      <li>What does it mean to "hardcode" when we talk about programming? (In English, it's called "hard
+        coding", "hard-coding", or "hardcoding").</li>
+      <p>When writing code, hardcoding means that we write fixed values in the code rather than get it from users, files or a database.</p>
+      
+      <li>Explain in plain text what happens in task 3, and how we can traverse (iterate) the array when we
+        (humans) don't "know" how long the array is.</li>
+      <p>By using the .split() we make that every word in the string is added as an item to the a new array.</p>
+      <p>And using the .every() with the right functions like everyWord() it goes trough all items in the array and prints out it's index and the word associaded with it.</p>
+      <p>in my code i have added an +1 on my inex to make it more understandeble for the simpler person.</p>
+
+      <li>Why is it beneficial to store instances of a class in arrays, as in task 4?</li>
+      <p> Probably task 6 you are talking about...</p>
+      <p>It is beneficial to store instances of a class in arrays because it allows us to group similar objects together, making it easier to manage and manipulate them as a single collection.</p>
+      
+      <li>Try your best to explain the EWeekDays object from task 7. How do we use the "value" attribute, for
+        example? In what way do "WeekDay", "Workdays", and "Weekends" differ from each other? If we
+        wanted to create a new element "WorkoutDays", which would contain "Monday", "Wednesday", and
+        "Thursday", how would it ideally look? (I will choose the best answer to this task and reward it with
+        pizza in the cafeteria right after New Year. Remember to mark in your submission if you want to
+        participate in the competition!)</li>
+      <p>Good question! I would probably make it like this in the code: </p> 
+      <p>"WorkoutDays: { value: 0x01 + 0x04 + 0x08, name: "Treningsdager" }"</p> 
+      <p>and the result would be this:</p>
+      <p>WorkoutDays: value: 13, name: Treningsdager</p>
+      <p>but the reason why we use the values is to make it smaller in storage size, but also makes it efficient with the machine code and are more compact.</p>
+      
+      <li>In task 8, we will use a "callback" routine when sorting. Explain how such a "callback" routine works.</li>
+      <p>by using the sort() method with a function that dictates numbes, we can sort it easly because it compares the values instead of just the first number.</p>
+      <p>For example: if we have a function that compares two numbers, it will return -1 if the first number is smaller than the second, 0 if they are equal, and 1 if the first number is larger than the second.</p>
+      <p>The sort() is only comparing from the first number in its value so it cannont sort it out on its own.</p>
+
+      <li>What happens in the sorting routines you have created? Try to explain how the array can figure out
+        if an element should come before or after another. The best way to answer this is to actually print
+        both parameters each time the sorting routine runs.</li>
+      <p>as explained in the last question, it compares between two numbers where it tests if it is less then, equals or more than the first number</p>
+      <p>and then it returns the value of -1, 0 or 1 to the sort() method and it will sort it out for you.</p>
+      <p>and if you print out the values it will show you the numbers that are being compared.</p>
+      
+      <li>In task 10, we will create an array with rows and columns. Explain what the first element of the array
+        contains.</li>
+      <p>It contains the arrays index of the row it is on, it always starts on 0, and works its way on the row and then starts on it's next row after.</p>
+    </ol>
+    <script type="module" src="./task_4-2.mjs" defer></script>
+  </body>
+</html>

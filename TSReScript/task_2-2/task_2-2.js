@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const utils_mjs_1 = require("../../lib/utils.mjs");
+(0, utils_mjs_1.initPrintOut)(document.getElementById("txtOut"));
+(0, utils_mjs_1.printOut)("----part 1----------------------------------------------------------------------");
+const firstParagraph = 2;
+const secondParagraph = (3 * (2 - 4));
+const thirdParagraph = 6;
+;
+const part1Solution = firstParagraph + secondParagraph * thirdParagraph;
+(0, utils_mjs_1.printOut)("The solution to part 1 is: " + part1Solution);
+(0, utils_mjs_1.newLine)();
+(0, utils_mjs_1.printOut)("----part 2----------------------------------------------------------------------");

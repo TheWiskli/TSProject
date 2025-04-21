@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" style="display: table; margin: auto; zoom: 1">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task 3.2</title>
+  </head>
+  <body style="display: table-cell; vertical-align: middle">
+    <h2><label for="txtOut">Output from Task 3.2:</label></h2>
+    <div style="padding: 10px; min-width: 512px; border: darkblue thin solid; background-color: antiquewhite; font-family: 'Courier New', serif">
+      <span id="txtOut" style="white-space: nowrap"></span>
+    </div>
+    <ol>
+      <li>In part 1, is it possible to to solve the problem using a single "for" loop?</li>
+      
+        <p>
+          There is a possabillity to do this by combining the two by changing the minus variable to count from 11 and backwards.<br> 
+          Taking my code as an example. if I change line 18 to following: <br>
+         <br>
+        txtPrintValueMinus += (11 - count).toString()<br>
+         <br>
+          and the if sentence on line 19 to the same as it's predesessor on line 12, and remove the for loop at line 17. <br> 
+          You get a working loop of numbers. The only reason why I haven't done this is because it makes greater <br> 
+          chanses to create bugs if you were gonna change the count variable, and the code looks much cleaner.
+        </p>
+
+      <li>In part 2, can we create what is known as an "infinite" loop within the condition of the while loop?</li>
+      
+        <p>The easyest way is to give it a task that is imposible to solve in the loop, an example is to change<br> 
+          the guessed number to a number outside the "math.random" barrier like 61 or something higher og below 0</p>
+      
+      <li>Discuss briefly how quickly or slowly a computer might be able to compute this,<br> 
+        considering the number of guesses and the time it takes. <br>
+        How does the program behave while it is guessing? <br>
+        Can the program perform other tasks concurrently?</li>
+      
+        <p>While it is going through a loop in the program, it would refuse to show anything from the codes that is attached in the same javascript file.<br>
+        it will show everything after it is finished.<br>
+        <br>
+        And just like all other programming languages. Javascript has to read the code from top to bottom, if there is a hiccup on the way down it wouldn't jump over the code untill it is finished.</p>
+      
+      <li>Explain the relationship between rows and columns in nested "for" loops.<br> 
+        Can we, for instance, change the order, considering rows to be innermost or columns to be innermost, <br>
+        or does this not matter?</li>
+      
+        <p>I does matter. Depending what you are making, using the rows and columns would change the output on how the result would look, <br> 
+          the columns woudnt give the right amount of data per row as requested in the task.<br> 
+          Task 5 is basically showing us that it will always do the nested loops first before continuing<br>
+          the outer ones.</p>
+    </ol>
+    <script type="module" src="./task_3-2.mjs" defer></script>
+  </body>
+</html>
