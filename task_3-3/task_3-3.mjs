@@ -146,7 +146,7 @@ function CalculateNetPrice(aPrice, aTaxGroup, aName){
   printOut(newLine);
   }
   else{
-      net = NaN
+      net = NaN;
   }
   return net;
 }
