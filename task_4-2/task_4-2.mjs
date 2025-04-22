@@ -31,7 +31,7 @@ function everyWord(word, index){
 printOut(newLine);
 
 printOut("--- Part 4 ----------------------------------------------------------------------------------------------");
-const females = ["Anne", "Inger", "Kari", "Marit", "Ingrid", "Liv", "Eva", "Berit", "Astrid", "Bjørg", "Hilde", "Anna", "Solveig", "Marianne", "Randi", "Ida", "Nina", "Maria", "Elisabeth", "Kristin"]
+const females = ["Anne", "Inger", "Kari", "Marit", "Ingrid", "Liv", "Eva", "Berit", "Astrid", "Bjørg", "Hilde", "Anna", "Solveig", "Marianne", "Randi", "Ida", "Nina", "Maria", "Elisabeth", "Kristin"];
 
 function nameRemover(array, name){
   const index = array.indexOf(name);
