@@ -81,7 +81,26 @@ function printBook(aBook: TBook): void {
 printOut(newLine);
 
 printOut("--- Part 7 --------------------------------------------------------------------------------------");
-const EWeekDays = {
+interface WeekDayEntry {
+    value: number;
+    name: string;
+  }
+
+interface EWeekDaysType {
+    WeekDay1: WeekDayEntry;
+    WeekDay2: WeekDayEntry;
+    WeekDay3: WeekDayEntry;
+    WeekDay4: WeekDayEntry;
+    WeekDay5: WeekDayEntry;
+    WeekDay6: WeekDayEntry;
+    WeekDay7: WeekDayEntry;
+    Workdays: WeekDayEntry;
+    Weekends: WeekDayEntry;
+    WorkoutDays: WeekDayEntry;
+}
+  
+
+const EWeekDays: EWeekDaysType = {
     WeekDay1: { value: 0x01, name: "Mandag" },
     WeekDay2: { value: 0x02, name: "Tirsdag" },
     WeekDay3: { value: 0x04, name: "Onsdag" },
@@ -92,8 +111,47 @@ const EWeekDays = {
     Workdays: { value: 0x01 + 0x02 + 0x04 + 0x08 + 0x10, name: "Arbeidsdager" },
     Weekends: { value: 0x20 + 0x40, name: "Helg" },
     WorkoutDays: { value: 0x01 + 0x04 + 0x08, name: "Treningsdager" },
-  };
+};
 
+const keys: string[] = Object.keys(EWeekDays);
+printOut("Alle keys: +" + keys.join(", "));
+const values: number[] = Object.values(EWeekDays);
+printOut("Alle values: " + values.join(", "));
+let valueKeys: string[] = Object.values(EWeekDays[keys[7] as keyof EWeekDaysType]);
+printOut("Value i spesifik key: " + valueKeys.join(", "));
+
+
+for(let index: number = 0; index < keys.length; index++){
+    let svar: string = "";
+    const key: string = keys[index];
+    svar += key + ": ";
+
+    const keyObject: WeekDayEntry = EWeekDays[key as keyof EWeekDaysType];
+    const keyObjectValue: any = Object.values(keyObject);
+    for(let index2: number = 0; index2 < keyObjectValue.length; index2++){
+        const keyObjectKey: string = keys[index2];
+        svar += keyObjectKey + ": " + keyObject[keyObjectKey as keyof WeekDayEntry] + ", ";
+    }
+    printOut(svar);
+}
+printOut(newLine);
 printOut("--- Part 8 --------------------------------------------------------------------------------------");
+function sortRandomValues(aValue1: number, aValue2: number): number{
+    return aValue1 - aValue2;
+}
+
+
+
+const rngNumbers: number[] = [];
+
+for(let i: number = 0; i < 35; i++){
+    const randomNumber: number = Math.floor(Math.random() * 20) + 1;
+    rngNumbers.push(randomNumber);
+}
+printOut("35 tilfeldige tall: " + rngNumbers.join(", "));
+
+rngNumbers.sort(sortRandomValues);
+
+
 printOut("--- Part 9 --------------------------------------------------------------------------------------");
 printOut("--- Part 10 --------------------------------------------------------------------------------------");
